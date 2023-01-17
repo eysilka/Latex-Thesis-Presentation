@@ -1,0 +1,102 @@
+\documentclass[xcolor={table}]{beamer}
+%\usetheme{Lapesd}
+\usepackage{beamerthemeLapesd}
+
+%\usepackage[brazil]{babel}	
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled]{helvet}
+\usepackage{amsthm}
+\usepackage{ragged2e}
+\usepackage[table]{xcolor}
+\usepackage{ctable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{fancyvrb}
+\usepackage{verbatim}
+
+\usepackage{fontspec}
+\usepackage[utf8]{inputenc} % inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{subcaption}
+
+\definecolor{mapOrange}{rgb}{255,230,204}
+
+
+
+\graphicspath{{fig/}}
+\DeclareGraphicsExtensions{.pdf,.jpg,.png,.gif}
+
+\def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
+  \hbox{}\nobreak\hfil(#1)
+  \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+
+\renewcommand{\footnotesize}{\tiny}
+
+\newcommand{\Tsup}[1]{%
+  \texorpdfstring{\textsuperscript{#1}}{}%
+}
+
+\newcommand{\mymacro}[1]{#1}
+
+\addtobeamertemplate{block begin}{}{\justifying}
+
+\captionsetup{labelformat=simple}
+\captionsetup[table]{belowskip=0pt}
+
+\title[Offline HAWR using Deep Learning]
+{\textbf{Offline Handwritten Amharic Word Recognition using Deep Learning}}
+
+\author[Eyob S.]{Eyob Sisay \\ Advisor: Dr. Getachew A. \\ Co-Advisor: Mr. Fetulhak A.}
+\date{15/06/2021}
+\institute{Faculty of Electrical and Computer Engineering \\ Jimma Institute of Technology, Ethiopia \\
+\url{sisay.eyob@ju.edu.et}}
+
+
+\begin{document}
+
+\begingroup
+\makeatletter
+\setlength{\hoffset}{-.5\beamer@sidebarwidth}
+\makeatother
+\begin{frame}[plain,t,noframenumbering]
+    
+    \titlepage
+   
+\end{frame}
+\endgroup
+
+%================================
+\input{contents/introduction.tex}
+
+%================================
+\input{contents/hawr.tex}
+
+%================================
+\input{contents/litratures.tex}
+
+%================================
+\input{contents/methodology.tex}
+
+%================================
+\input{contents/experimental_results.tex}
+
+%================================
+\input{contents/conclusion.tex}
+
+%================================
+\begin{frame}[allowframebreaks]{References}
+	\def\newblock{}
+	\bibliographystyle{plain}
+	\bibliography{references}
+\end{frame}
+
+%================================
+%\input{contents/anex.tex}
+
+\ThankYouFrame
+
+%=================================
+
+\end{document}
